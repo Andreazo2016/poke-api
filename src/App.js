@@ -2,22 +2,19 @@
 import React, { Component } from 'react';
 import ListarPokemon from './components/pokemonsList'
 import Navegacao from './components/nav';
+import {Jumbotron,Container} from 'reactstrap'
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className = "container">
+      <Container>
         <Navegacao/>
-          <div className='jumbotron'>
-          <h1 className="display-4 text-center">
-          API de Pokemon
-          </h1>
-          </div>
-        </div>  
-          <ListarPokemon/>
-      </div>
+      <Jumbotron>
+        <h1 >Site de Pokemon</h1>
+      </Jumbotron>
+      <ListarPokemon/>
+    </Container>
     );
   }
 }

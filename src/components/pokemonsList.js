@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {Link} from 'react-router-dom'
 import PokeService from './services/pokeService'
+import { Table,Container } from 'reactstrap';
 export  default class ListarPokemon extends Component{
 
 	state = {
@@ -16,8 +17,8 @@ export  default class ListarPokemon extends Component{
 				<div>
 					<div>
 					</div>
-					<div className='container'>
-						<table className='table table-bordered'>
+					<Container>
+						<Table bordered >
 							<thead>
 								<tr>
 								
@@ -40,8 +41,8 @@ export  default class ListarPokemon extends Component{
 									})
 								}				
 							</tbody>
-						</table>
-					</div>
+						</Table>
+					</Container>
 				</div>
 
 

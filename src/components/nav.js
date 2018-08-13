@@ -1,22 +1,33 @@
-import React,{Component} from 'react'
-import {Link} from 'react-router-dom'
-export default class Navegacao extends Component{
-    render(){
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { Nav, NavItem,NavLink } from 'reactstrap'
+export default class Navegacao extends Component {
+    render() {
         return (
-            <div>
-                <ul className="nav">
-                    <li className="nav-item">
-                    <p className='nav-link'>
-                        <Link to='/'>Home</Link>
-                        </p>
-                    </li>
-                    <li className="nav-item">
-                        <p className='nav-link'>
-                        <Link to='/about'>About</Link>
-                        </p>
-                    </li>
-                </ul>
-            </div>
+            <Nav>
+                <NavItem>
+                    <NavLink>
+                        <Link exact to='/'>
+                        Home
+                        </Link>
+                    </NavLink>
+                </NavItem>
+                <NavItem>
+                <NavLink>
+                        <Link exact to='/register'>
+                        Cadastrar
+                        </Link>
+                    </NavLink>
+                </NavItem>
+                <NavItem>
+                <NavLink>
+                        <Link exact to='/About'>
+                        Sobre
+                        </Link>
+                    </NavLink>
+                </NavItem>
+                
+            </Nav>
         )
     }
 }
