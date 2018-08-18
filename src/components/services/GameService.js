@@ -8,21 +8,21 @@ export default class PokeService {
         };
      }
     
-    AllPokemon() {
+    AllGames() {
         const pokemons = [{
             id:1,
-            name:'bulba',
-            power:15
+            name:'God Of War',
+            midia:'Física'
         },
         {
             id:2,
-            name:'pikachu',
-            power:17
+            name:'Gear Of War',
+            midia:'Física'
         },
         {
             id:3,
-            name:'chamander',
-            power:18
+            name:'Residente Evil',
+            midia:'Física'
         }
 
     ]

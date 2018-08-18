@@ -1,16 +1,16 @@
 import React,{Component} from 'react'
 import {Link} from 'react-router-dom'
-import PokeService from './services/pokeService'
+import GameService from './services/GameService'
 import { Table,Container } from 'reactstrap';
-export  default class ListarPokemon extends Component{
+export  default class ListarGames extends Component{
 
 	state = {
-		pokemons : []
+		Games : []
 	}
 	componentDidMount(){
-		const pokemons = new PokeService().AllPokemon()
-		console.log(pokemons)
-		this.setState({pokemons})
+		const Games = new GameService().AllGames()
+		console.log(Games)
+		this.setState({Games})
 	}
 	render(){
 		return (
@@ -23,19 +23,19 @@ export  default class ListarPokemon extends Component{
 								<tr>
 								
 								<th scope="col">Nome</th>
-								<th scope="col">Nível de poder</th>
+								<th scope="col">Mídia</th>
 								<th scope="col">Info</th>
 								</tr>
 							</thead>
 							<tbody>
 								{
-									this.state.pokemons.map((pokemon)=>{
+									this.state.Games.map((game)=>{
 										return (
 										<tr>
 												
-												<td>{pokemon.name}</td>
-												<td>{pokemon.power}</td>
-												<td><Link to={`/pokemon/${pokemon.id}`}>Mais Info</Link></td>
+												<td>{game.name}</td>
+												<td>{game.midia}</td>
+												<td><Link to={`/game/${game.id}`}>Mais Info</Link></td>
 										</tr>
 										)
 									})
